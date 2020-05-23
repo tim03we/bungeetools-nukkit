@@ -41,7 +41,8 @@ public class ThisIsMyHandlerClass extends RequestResponseAction {
     @Override
     public void handle(Player player, String type, Object data) {
         if(type.equals("PlayerCount")) {
-            System.out.println("Spieler Anzahl auf dem Lobby Server: " + data);
+            String[] ex = data.toString().split(":");
+            System.out.println("Player Count (" + ex[0] + "): " + ex[1]);
         }
     }
 }
